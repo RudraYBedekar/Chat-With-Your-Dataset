@@ -69,5 +69,4 @@ The application follows a modern RAG pipeline architecture:
 *   `plotly` & `matplotlib`
 *   `sentence-transformers` & `tf-keras`
 
----
-*Created with ❤️ by Antigravity*
+
