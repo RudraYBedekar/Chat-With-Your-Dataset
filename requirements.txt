@@ -1,0 +1,13 @@
+streamlit
+pandas
+langchain
+langchain_community
+langchain_core
+langchain_google_genai
+langchain_openai
+langchain_huggingface
+sentence-transformers
+huggingface_hub
+faiss-cpu
+tabulate
+tf-keras
