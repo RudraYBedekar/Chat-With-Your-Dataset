@@ -18,33 +18,7 @@ This tool converts your raw data into insights by generating a statistical summa
 
 The application follows a modern RAG pipeline architecture:
 
-```mermaid
-graph TD
-    User[👤 User] -->|1. Uploads CSV| App[💻 Streamlit App]
-    
-    subgraph "Data Processing"
-        App -->|Reads File| Pandas[🐼 Pandas]
-        Pandas -->|Generates Stats| Summary[📄 Data Summary]
-        Summary -->|Converts to Doc| LCDoc[📝 LangChain Document]
-    end
-    
-    subgraph "Chat Pipeline (RAG)"
-        LCDoc -->|Embeds Content| Embed[🧬 Embeddings]
-        Embed -->|Stores Vectors| FAISS[🔍 FAISS Store]
-        
-        User -->|2. Asks Question| Chain[⛓️ Retrieval Chain]
-        Chain -->|Query| FAISS
-        FAISS -->|Retrieved Context| LLM[🤖 LLM (Gemini/OpenAI/HF)]
-        LLM -->|3. Answer| App
-    end
-    
-    subgraph "Visualization Pipeline"
-        User -->|4. Requests Plot| PlotChain[📉 Plotting Chain]
-        PlotChain -->|Generates Code| LLM
-        LLM -->|Python Code| App
-        App -->|Executes| Plot[📊 Plotly/Matplotlib Graph]
-    end
-```
+![Architecture Diagram](architecture.png)
 
 ## ✨ Key Features
 
